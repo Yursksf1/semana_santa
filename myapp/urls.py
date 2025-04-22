@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.urls import path
 from django.views.generic import TemplateView
+from myapp import views
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='myapp/index.html')),
     path('itinerario', TemplateView.as_view(template_name='myapp/itinerario.html')),
-    path('videos', TemplateView.as_view(template_name='myapp/videos.html')),
+    path('videos', views.ver_videos),
 ]
